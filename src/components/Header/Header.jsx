@@ -1,11 +1,15 @@
 import { NavLink } from 'react-router-dom';
 
+const createNavLinkStyle = ({ isActive }) => ({
+  color: isActive ? 'blue' : 'black',
+});
+
 const Header = () => {
   return (
     <header 
       style={{
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignItems: 'center',
         padding: '20px',
         backgroundColor: '#f5f5f5',
@@ -13,6 +17,7 @@ const Header = () => {
         fontSize: '24px',
         fontWeight: 'bold',
         color: '#333',
+        textDecoration: 'none',
       }}
     >
       <h1>LOGO</h1>
@@ -27,28 +32,22 @@ const Header = () => {
           color: '#666',
         }}
       >
-        <NavLink 
-          style={({ isActive }) => ({
-            color: isActive ? 'blue' : 'black',
-          })}
+        <NavLink
+          style={createNavLinkStyle}
           to="/"
         >
           HomePage
         </NavLink>
 
         <NavLink 
-          style={({ isActive }) => ({
-            color: isActive ? 'blue' : 'black',
-          })}
+          style={createNavLinkStyle}
           to="/MoviesPage"
         >
           MoviesPage
         </NavLink>
 
         <NavLink 
-          style={({ isActive }) => ({
-            color: isActive ? 'blue' : 'black',
-          })}
+          style={createNavLinkStyle}
           to="/MovieDetailsPage"
         >
           MovieDetailsPage

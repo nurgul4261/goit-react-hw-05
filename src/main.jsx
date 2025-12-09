@@ -1,12 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import HomePage from "./pages/HomePage/HomePage";
-import MoviesPage from "./pages/MoviesPage/MoviesPage";
-import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage";
-import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
-
-import Header from "./components/Header/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage.jsx";
+import MoviesPage from "./pages/MoviesPage/MoviesPage.jsx";
+import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.jsx";
+import Header from "./components/Header/Header.jsx";
 
 
 createRoot(document.getElementById('root')).render(
@@ -15,8 +14,8 @@ createRoot(document.getElementById('root')).render(
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/MoviesPage" element={<MoviesPage />} />
-        <Route path="/MovieDetailsPage" element={<MovieDetailsPage />} />
+        <Route path="/movies" element={<MoviesPage />} />
+        <Route path="/movies/:movieId" element={<MovieDetailsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
