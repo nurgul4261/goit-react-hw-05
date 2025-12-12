@@ -31,7 +31,7 @@ function MoviesPage() {
         );
         setMovies(res.data.results);
       } catch (err) {
-        setError("Film arama sırasında hata oluştu.");
+        setError("Failed to search movies.");
       } finally {
         setLoading(false);
       }
