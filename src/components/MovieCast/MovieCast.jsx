@@ -28,7 +28,7 @@ function MovieCast() {
         );
         setCast(res.data.cast);
       } catch (err) {
-        setError("Oyuncu bilgileri yüklenirken hata oluştu.");
+        setError("Error occurred while loading player data.");
       } finally {
         setLoading(false);
       }
@@ -39,7 +39,7 @@ function MovieCast() {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p className={styles.error}>{error}</p>;
-  if (cast.length === 0) return <p>Oyuncu bilgisi bulunamadı.</p>;
+  if (cast.length === 0) return <p>- "No player information found."</p>;
 
   return (
     <ul className={styles.list}>

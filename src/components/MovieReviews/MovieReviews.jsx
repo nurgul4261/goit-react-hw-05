@@ -37,7 +37,7 @@ function MovieReviews() {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p className={styles.error}>{error}</p>;
-  if (reviews.length === 0) return <p>İnceleme bulunamadı.</p>;
+  if (reviews.length === 0) return <p>Review not found.</p>;
 
   return (
     <ul className={styles.list}>

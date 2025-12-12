@@ -1,10 +1,18 @@
 .list {
   list-style: none;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 }
 
 .item {
   margin: 0.5rem 0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(223, 172, 6, 0.1);
+  padding: 1rem;
+  margin-right: 1rem;
+  background-color: #eae8e7;
 }
 
 .link {
@@ -14,5 +22,6 @@
 }
 
 .link:hover {
-  color: #e50914;
+  color: #d19108;
+  font-weight: bold;
 }
