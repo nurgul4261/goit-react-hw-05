@@ -5,7 +5,7 @@ import axios from "axios";
 
 const options = {
   headers: {
-    Authorization: import.meta.env.VITE_TMDB_TOKEN,
+    Authorization: `Bearer ${import.meta.env.VITE_TMDB_TOKEN}`,
   },
 };
 
@@ -26,7 +26,7 @@ function MovieReviews() {
         );
         setReviews(res.data.results);
       } catch (err) {
-        setError("İncelemeler yüklenirken hata oluştu.");
+        setError("Failed to fetch reviews. Please try again later.");
       } finally {
         setLoading(false);
       }
@@ -37,7 +37,7 @@ function MovieReviews() {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p className={styles.error}>{error}</p>;
-  if (reviews.length === 0) return <p>Review not found.</p>;
+  if (reviews.length === 0) return <p>No reviews available</p>;
 
   return (
     <ul className={styles.list}>
