@@ -31,7 +31,7 @@ function MovieDetailsPage() {
         );
         setMovie(res.data);
       } catch (err) {
-        setError("Film detayları yüklenirken hata oluştu.");
+        setError("Failed to load movie details.");
       } finally {
         setLoading(false);
       }
