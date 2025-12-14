@@ -40,7 +40,7 @@ function MovieDetailsPage() {
     fetchMovieDetails();
   }, [movieId]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p className={styles.loading}>Loading...</p>;
   if (error) return <p className={styles.error}>{error}</p>;
   if (!movie) return null;
 
