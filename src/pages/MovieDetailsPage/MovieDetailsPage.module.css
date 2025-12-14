@@ -29,6 +29,25 @@
 
 .additional {
   margin-top: 2rem;
+  list-style: none;
+  text-align: center;
+  font-size: 24px;
+}
+
+.additional ul {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  justify-content: center;
+}
+
+.additional li {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #d19108;
+  list-style: none;
+  
+
 }
 
 .link {
@@ -37,6 +56,6 @@
 }
 
 .active {
-  color:#d19108;
+  color: #333;
   font-weight: bold;
 }
