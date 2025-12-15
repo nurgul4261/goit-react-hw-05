@@ -28,7 +28,7 @@ function HomePage() {
   return (
     <div className={styles.container}>
       <h1>Trending Today</h1>
-      {loading && <p>Loading...</p>}
+      {loading && <p className={styles.loading}>Loading...</p>}
       {error && <p className={styles.error}>{error}</p>}
       {movies.length > 0 && <MovieList movies={movies} />}
     </div>
