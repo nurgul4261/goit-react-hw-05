@@ -6,7 +6,7 @@ import axios from "axios";
 
 const options = {
   headers: {
-    Authorization: `Bearer ${import.meta.env.VITE_TMDB_TOKEN}`,
+    Authorization: `${import.meta.env.VITE_TMDB_TOKEN}`,
   },
 };
 
